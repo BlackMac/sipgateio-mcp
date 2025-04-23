@@ -1,6 +1,6 @@
 {
   "name": "sipgateio-mcp",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Sipgate API MCP server for AI code assistants",
   "private": false,
   "type": "module",
