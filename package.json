@@ -1,0 +1,48 @@
+{
+  "name": "sipgateio-mcp",
+  "version": "0.1.0",
+  "description": "Sipgate API MCP server for AI code assistants",
+  "private": false,
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BlackMac/sipgateio-mcp.git"
+  },
+  "keywords": [
+    "mcp",
+    "sipgate",
+    "api",
+    "ai",
+    "assistant"
+  ],
+  "author": "BlackMac",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BlackMac/sipgateio-mcp/issues"
+  },
+  "homepage": "https://github.com/BlackMac/sipgateio-mcp#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "bin": {
+    "sipgate-api-server": "./build/index.js"
+  },
+  "files": [
+    "build"
+  ],
+  "scripts": {
+    "build": "tsc && node -e \"require('fs').chmodSync('build/index.js', '755')\"",
+    "prepare": "npm run build",
+    "watch": "tsc --watch",
+    "inspector": "npx @modelcontextprotocol/inspector build/index.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "0.6.0",
+    "axios": "^1.8.4",
+    "sipgateio": "^2.15.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.24",
+    "typescript": "^5.3.3"
+  }
+}

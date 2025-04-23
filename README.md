@@ -1,5 +1,7 @@
 # Sipgate API MCP Server
 
+> **Disclaimer**: This is an unofficial integration and is not affiliated with, officially maintained, or endorsed by sipgate GmbH. This is a community project that uses the public sipgate API.
+
 MCP server that provides access to the sipgate API, enabling AI assistants to interact with sipgate services including SMS, calls, and account management.
 
 ## Prerequisites
@@ -19,10 +21,10 @@ Install the Sipgate API MCP server in VS Code using:
 
 ```bash
 # For VS Code
-code --add-mcp '{"name":"sipgate-api","command":"npx","args":["-y","@sipgate/mcp"],"env":{"SIPGATE_TOKEN_ID":"your-token-id","SIPGATE_TOKEN":"your-token"}}'
+code --add-mcp '{"name":"sipgate-api","command":"npx","args":["-y","sipgateio-mcp"],"env":{"SIPGATE_TOKEN_ID":"your-token-id","SIPGATE_TOKEN":"your-token"}}'
 
 # For VS Code Insiders
-code-insiders --add-mcp '{"name":"sipgate-api","command":"npx","args":["-y","@sipgate/mcp"],"env":{"SIPGATE_TOKEN_ID":"your-token-id","SIPGATE_TOKEN":"your-token"}}'
+code-insiders --add-mcp '{"name":"sipgate-api","command":"npx","args":["-y","sipgateio-mcp"],"env":{"SIPGATE_TOKEN_ID":"your-token-id","SIPGATE_TOKEN":"your-token"}}'
 ```
 
 ### Cursor
@@ -40,7 +42,7 @@ To add this server to Cursor IDE:
       "command": "npx",
       "args": [
         "-y",
-        "@sipgate/mcp"
+        "sipgateio-mcp"
       ],
       "env": {
         "SIPGATE_TOKEN_ID": "your-token-id",
@@ -62,7 +64,7 @@ Add to your `claude_desktop_config.json` file:
       "command": "npx",
       "args": [
         "-y",
-        "@sipgate/mcp"
+        "sipgateio-mcp"
       ],
       "env": {
         "SIPGATE_TOKEN_ID": "your-token-id",
@@ -84,7 +86,7 @@ Add to your `cline_mcp_settings.json` via the Cline MCP Server settings:
       "command": "npx",
       "args": [
         "-y",
-        "@sipgate/mcp"
+        "sipgateio-mcp"
       ],
       "env": {
         "SIPGATE_TOKEN_ID": "your-token-id",
@@ -106,7 +108,7 @@ Access MCP settings via "Edit MCP Settings" in Roo Code settings:
       "command": "npx",
       "args": [
         "-y",
-        "@sipgate/mcp"
+        "sipgateio-mcp"
       ],
       "env": {
         "SIPGATE_TOKEN_ID": "your-token-id",
