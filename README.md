@@ -15,25 +15,9 @@ MCP server that provides access to the sipgate API, enabling AI assistants to in
 
 ## Installation
 
-### VS Code
+### Claude
 
-Install the Sipgate API MCP server in VS Code using:
-
-```bash
-# For VS Code
-code --add-mcp '{"name":"sipgate-api","command":"npx","args":["-y","sipgateio-mcp"],"env":{"SIPGATE_TOKEN_ID":"your-token-id","SIPGATE_TOKEN":"your-token"}}'
-
-# For VS Code Insiders
-code-insiders --add-mcp '{"name":"sipgate-api","command":"npx","args":["-y","sipgateio-mcp"],"env":{"SIPGATE_TOKEN_ID":"your-token-id","SIPGATE_TOKEN":"your-token"}}'
-```
-
-### Cursor
-
-To add this server to Cursor IDE:
-
-1. Navigate to Cursor Settings > MCP
-2. Click + Add new Global MCP Server
-3. Add the following to your global `.cursor/mcp.json` file:
+Add to your `claude_desktop_config.json` file:
 
 ```json
 {
@@ -53,9 +37,27 @@ To add this server to Cursor IDE:
 }
 ```
 
-### Claude
+To find the `claude_desktop_config.json` file, open the Claude app and go to Settings > Advanced > Open config file.
 
-Add to your `claude_desktop_config.json` file:
+### VS Code
+
+Install the Sipgate API MCP server in VS Code using:
+
+```bash
+# For VS Code
+code --add-mcp '{"name":"sipgate-api","command":"npx","args":["-y","sipgateio-mcp"],"env":{"SIPGATE_TOKEN_ID":"your-token-id","SIPGATE_TOKEN":"your-token"}}'
+
+# For VS Code Insiders
+code-insiders --add-mcp '{"name":"sipgate-api","command":"npx","args":["-y","sipgateio-mcp"],"env":{"SIPGATE_TOKEN_ID":"your-token-id","SIPGATE_TOKEN":"your-token"}}'
+```
+
+### Cursor
+
+To add this server to Cursor IDE:
+
+1. Navigate to Cursor Settings > MCP
+2. Click + Add new Global MCP Server
+3. Add the following to your global `.cursor/mcp.json` file:
 
 ```json
 {
@@ -178,7 +180,7 @@ For more help, open an issue on GitHub with:
 
 ## Development
 
-Contributions welcome! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+Contributions welcome!
 
 ## License
 
