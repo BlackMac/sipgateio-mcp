@@ -1,0 +1,30 @@
+# Smithery configuration for Sipgate MCP Server
+startCommand:
+  type: stdio
+  configSchema:
+    type: object
+    properties:
+      tokenId:
+        type: string
+        title: "Sipgate Token ID"
+        description: "Your Sipgate API Token ID"
+      token:
+        type: string
+        title: "Sipgate Token"
+        description: "Your Sipgate API Token"
+    required:
+      - tokenId
+      - token
+  commandFunction: |
+    (config) => ({
+      command: "node",
+      args: ["build/index.js"],
+      env: {
+        SIPGATE_TOKEN_ID: config.tokenId,
+        SIPGATE_TOKEN: config.token
+      }
+    })
+
+build:
+  dockerfile: "./Dockerfile"
+  dockerBuildPath: "."
